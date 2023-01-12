@@ -10,6 +10,8 @@
     "start": "nodemon --exec electron . --watch ./ --ext .js,.html,.css,.vue"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
+    "stylus": "^0.59.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
