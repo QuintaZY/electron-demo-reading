@@ -1,17 +1,20 @@
 <script setup>
-import { ref, reactive, computed, onMounted , inject} from "vue";
-const {isShow, setIsShow} = inject('dialog-show')
+import { ref, reactive, computed, onMounted, inject } from "vue";
+const { isShow, setIsShow } = inject("dialog-show");
+const url = ref("https://www.baidu.com");
 
-const handleAddClick = () => {
-
-}
+const handleAddClick = async () => {
+  // console.log(myApi,url.value)
+  const result = await myApi.sendUrl(url.value);
+  
+};
 </script>
 
 <template>
   <div v-if="isShow" class="dialog-wrap">
     <div class="content">
       <div class="input">
-        <input    type="text" placeholder="请输入网址..." />
+        <input v-model="url" type="text" placeholder="请输入网址..." />
       </div>
       <div class="btns">
         <button @click="handleAddClick">添加</button>
@@ -34,8 +37,11 @@ const handleAddClick = () => {
   align-items center
   z-index 1000
   .content
-    width 100%
+    width 55%
+    border-radius 30px
     padding 0 20px
+    display flex
+    flex-direction: column
     input
       height 30px
       width 100%

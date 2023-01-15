@@ -1,8 +1,8 @@
 <script setup>
 import { ref, reactive, computed, onMounted, inject } from "vue";
-const {setIsShow} = inject('dialog-show')
+const { setIsShow } = inject("dialog-show");
 const handleClick = () => {
-  setIsShow(true)
+  setIsShow(true);
 };
 </script>
 
@@ -28,7 +28,7 @@ div.search-container
     height 40px
     background-color #1e90ff
     padding-left 0
-    border-redius 5px
+    border-radius 5px
     font-size 30px
     font-weight bold
     color #fff

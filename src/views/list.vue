@@ -1,5 +1,6 @@
 <script setup>
 import { ref, reactive, computed, onMounted } from "vue";
+
 </script>
 
 <template>
@@ -7,9 +8,9 @@ import { ref, reactive, computed, onMounted } from "vue";
     <p id="no-item">暂无数据.</p>
     <div class="item">
       <div class="read-item">
-        <img src="" alt="">
+        <img src="" alt="" />
         <h2>百度一下，你就知道了</h2>
-        <button> x </button>
+        <button>x</button>
       </div>
     </div>
   </div>

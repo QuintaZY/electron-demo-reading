@@ -1,7 +1,9 @@
 const { app, BrowserWindow } = require("electron")
 const WinState = require('electron-win-state').default
-
 const path = require('path')
+
+
+require('./controller/getSource')   // 获取网站的截图
 
 const createWindow = () => {
   const winState = new WinState({
@@ -20,7 +22,7 @@ const createWindow = () => {
   win.loadURL('http://localhost:5173')
   win.webContents.openDevTools()
   winState.manage(win)
-  win.on('ready-to-show',() => {
+  win.on('ready-to-show', () => {
     win.show()
   })
 }
